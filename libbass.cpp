@@ -1,0 +1,38 @@
+#include "libbass.h"
+
+int (*BASS_Init) (uint32_t, uint32_t, uint32_t);
+int (*BASS_Free) (void);
+int (*BASS_SetConfigPtr) (uint32_t, const char *);
+int (*BASS_SetConfig) (uint32_t, uint32_t);
+int (*BASS_ChannelStop) (uint32_t);
+int (*BASS_StreamCreateURL) (char *, uint32_t, uint32_t, uint32_t);
+int (*BASS_StreamCreate) (uint32_t, uint32_t, uint32_t, STREAMPROC *, void *);
+int (*BASS_ChannelPlay) (uint32_t, bool);
+int (*BASS_ChannelPause) (uint32_t);
+int *BASS_ChannelGetTags;
+int *BASS_ChannelSetSync;
+int *BASS_StreamGetFilePosition;
+int (*BASS_StreamFree) (uint32_t);
+int (*BASS_ErrorGetCode) (void);
+int (*BASS_Set3DFactors) (float, float, float);
+int (*BASS_Set3DPosition) (const BASS_3DVECTOR *, const BASS_3DVECTOR *, const BASS_3DVECTOR *, const BASS_3DVECTOR *);
+int (*BASS_Apply3D) (void);
+int (*BASS_ChannelSetFX) (uint32_t, HFX);
+int (*BASS_ChannelRemoveFX) (uint32_t, HFX);
+int (*BASS_FXSetParameters) (HFX, const void *);
+int (*BASS_IsStarted) (void);
+int (*BASS_RecordGetDeviceInfo) (uint32_t, BASS_DEVICEINFO *);
+int (*BASS_RecordInit) (int);
+int (*BASS_RecordGetDevice) (void);
+int (*BASS_RecordFree) (void);
+int (*BASS_RecordStart) (uint32_t, uint32_t, uint32_t, RECORDPROC *, void *);
+int (*BASS_ChannelSetAttribute) (uint32_t, uint32_t, float);
+int (*BASS_ChannelGetData) (uint32_t, void *, uint32_t);
+int (*BASS_RecordSetInput) (int, uint32_t, float);
+int (*BASS_StreamPutData) (uint32_t, const void *, uint32_t);
+int (*BASS_ChannelSetPosition) (uint32_t, uint64_t, uint32_t);
+int (*BASS_ChannelIsActive) (uint32_t);
+int (*BASS_ChannelSlideAttribute) (uint32_t, uint32_t, float, uint32_t);
+int (*BASS_ChannelSet3DAttributes) (uint32_t, int, float, float, int, int, float);
+int (*BASS_ChannelSet3DPosition) (uint32_t, const BASS_3DVECTOR *, const BASS_3DVECTOR *, const BASS_3DVECTOR *);
+int (*BASS_SetVolume) (float);
